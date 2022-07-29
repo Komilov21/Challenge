@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       body{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+       }
+
+       div:nth-of-type(3) ul:nth-child(2) > li:nth-child(2){
+        color:green;
+       }
+
+    </style>
+</head>
+
+<body>
+        <h1 id="title-1">Exam Time</h1>
+        <div class="title-2">Time to change the result</div>
+        <div>
+          <p>What to do.. to do better</p>
+          <ol>
+            <li>practice</li>
+            <li>practice</li>
+            <li>practice</li>
+          </ol>
+        </div>
+    
+        <div>
+          <p>fruits</p>
+          <ul>
+            <li>strawberries</li>
+            <li>apple</li>
+            <li>grapes</li>
+          </ul>
+          <p>vegetables</p>
+          <ul>
+            <li>carrot</li>
+            <li>Lettuce</li>
+            <li>cucumber</li>
+          </ul>
+        </div>
+        <div>
+          <button>don't touch me</button>
+        </div>
+        <div>
+          <p>change the button below</p>
+          <button onclick="changeText" >unfortunately you failed your Benchmark</button>
+        </div>
+      
+        <script>
+            let changeText = function(event){
+                const text = document.getElementsByTagName("button")[1];
+                text.innerHTML = "You Passed";
+            }
+            changeText()
+            
+        </script>
+</body>
+</html>
